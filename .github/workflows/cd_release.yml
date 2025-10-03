@@ -1,5 +1,6 @@
 name: CD Release Pipeline
-
+permissions:
+  contents: write
 on:
   push:
     tags:
