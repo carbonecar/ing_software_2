@@ -1,9 +1,9 @@
 name: CD Release Pipeline
 
-on: 
-    create: 
-        tags:
-            - 'v*.*.*'  # Trigger on version tags like v1.0.0
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Trigger on version tags like v1.0.0
 
 jobs:
     create-github-release:
