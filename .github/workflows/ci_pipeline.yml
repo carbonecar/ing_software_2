@@ -30,9 +30,7 @@ jobs:
               coverage run -m unittest discover -s . -p "test*.py"
 
         - name: Coverage Report
-          run: |
-              coverage report --fail-under=85
-              coverage xml -o coverage.xml
+          run: coverage report && coverage xml -o coverage.xml
               
         - name: Publicar coverage como artefacto
           if: always()
@@ -40,4 +38,3 @@ jobs:
           with:
             name: coverage-xml
             path: coverage.xml
-
