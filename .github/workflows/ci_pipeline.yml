@@ -41,12 +41,3 @@ jobs:
             name: coverage-xml
             path: coverage.xml
 
-        - name: Resumen en la UI
-          if: always()
-          run: |
-            {
-              echo "##[group]Coverage Summary"
-              coverage report
-              echo "##[endgroup]"
-            } >> "$GITHUB_STEP_SUMARY"
-    # Additional jobs can be added here
